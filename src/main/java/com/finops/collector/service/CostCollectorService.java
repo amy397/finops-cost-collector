@@ -84,7 +84,7 @@ public class CostCollectorService {
 
             response.resultsByTime().forEach(result -> {
                 result.groups().forEach(group -> {
-                    String serviceName = group.keys().getFirst();
+                    String serviceName = group.keys().get(0);
                     var cost = group.metrics().get("UnblendedCost");
                     BigDecimal amount = new BigDecimal(cost.amount());
 
