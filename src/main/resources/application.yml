@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cost-collector
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/finops}
+    username: ${SPRING_DATASOURCE_USERNAME:finops}
+    password: ${SPRING_DATASOURCE_PASSWORD:finops123}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+aws:
+  region: ${AWS_REGION:ap-northeast-2}
+
+logging:
+  level:
+    com.finops: DEBUG
