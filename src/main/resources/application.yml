@@ -21,7 +21,7 @@ spring:
     show-sql: true
 
 server:
-  port: 8082
+  port: ${SERVER_PORT:8082}
 
 aws:
   region: ap-northeast-2
